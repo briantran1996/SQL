@@ -56,7 +56,9 @@ VALUES
     ('Company JJ', 'Manufacturing', 370.0, 3100, 1, 20, 12, 7.6),
     ('Company KK', 'Healthcare', 150.2, 3400, 0, 16, 8, 5.3);
 
+# Analysis:
 
+# Assigning all companies as "Profitable", "Average", or "Below average" based on their revenue.
 SELECT company_name, revenue,
 CASE WHEN revenue>=300 THEN "Profitable"
 WHEN revenue>=200 THEN "Average"
@@ -66,17 +68,20 @@ END AS "Profitability"
 FROM fortune_companies
 ORDER BY revenue desc; 
 
+# Which industries have a total of over 10,000 employees?
 SELECT industry, SUM(employees) AS total_employees
 FROM fortune_companies
 GROUP BY industry
 HAVING SUM(employees) > 10000;
 
+# Which companies have less than 10,000 companies "and" a revenue of over $300 billion?
 SELECT company_name, revenue, employees
 from fortune_companies
 WHERE employees < 10000
 AND revenue > 300
 ORDER BY revenue desc;
 
+#Which company from each industry has generated the most revenue?
 SELECT company_name, industry, MAX(revenue) as maximum_revenue
 FROM fortune_companies
 GROUP by industry;
