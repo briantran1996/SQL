@@ -37,3 +37,37 @@ SELECT track_name, artist_name, popularity
 FROM BIT_DB.spotifydata
 ORDER BY popularity desc
 LIMIT 10
+
+#1. Which artist appears most frequently in the top 50?
+SELECT artist_name, COUNT(*) AS track_count
+FROM spotifydata
+GROUP BY artist_name
+ORDER BY track_count DESC
+LIMIT 1;
+
+#2. What are the top 5 most popular tracks?
+SELECT track_name, artist_name, popularity
+FROM spotifydata
+ORDER BY popularity DESC
+LIMIT 5;
+
+#3. What is the average danceability and energy of tracks by "Olivia Rodrigo"?
+SELECT AVG(danceability) AS avg_danceability, AVG(energy) AS avg_energy
+FROM spotifydata
+WHERE artist_name = 'Olivia Rodrigo';
+
+#4. Which tracks have a valence higher than 0.8 (very positive)?
+SELECT track_name, artist_name, valence
+FROM spotifydata
+WHERE valence > 0.8
+ORDER BY valence DESC;
+
+#5. What is the distribution of tracks by musical key?
+SELECT song_key, COUNT(*) AS num_tracks
+FROM spotify_top50
+GROUP BY song_key
+ORDER BY num_tracks DESC;
+
+
+
+
