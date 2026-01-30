@@ -1,3 +1,4 @@
+```sql
 CREATE TABLE superstore (
     item_id INTEGER PRIMARY KEY,
     item_name TEXT,
@@ -42,3 +43,4 @@ WHERE category='Kitchen Supplies';
 SELECT stock_quantity
 FROM superstore
 WHERE item_name='Premium Coffee Maker'
+```
