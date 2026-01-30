@@ -1,3 +1,4 @@
+```sql
 #1. 
 SELECT FirstName, LastName, CustomerId, Country 
 FROM chinook.customers 
@@ -98,3 +99,4 @@ WHERE emp.Title = 'Sales Support Agent'
 AND Inv.InvoiceDate LIKE '2009%' 
 GROUP BY emp.FirstName
 ORDER BY (round(sum(Inv.Total), 2))  DESC LIMIT 1;
+```
