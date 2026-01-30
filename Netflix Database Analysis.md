@@ -1,3 +1,4 @@
+```sql
 #This project utilized data from the following Netflix dataset:
 
 CREATE TABLE netflix_titles_info
@@ -88,3 +89,4 @@ FROM "netflix_titles_info"
 WHERE type = 'Movie'
 ORDER BY release_year asc
 LIMIT 1;
+```
