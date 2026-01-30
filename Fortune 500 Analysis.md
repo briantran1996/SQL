@@ -1,3 +1,4 @@
+```sql
 CREATE TABLE fortune_companies (
     company_id INTEGER PRIMARY KEY,
     company_name TEXT,
@@ -80,7 +81,7 @@ from fortune_companies
 WHERE employees < 10000
 AND revenue > 300
 ORDER BY revenue desc;
-
+```
 #Which company from each industry has generated the most revenue?
 SELECT company_name, industry, MAX(revenue) as maximum_revenue
 FROM fortune_companies
