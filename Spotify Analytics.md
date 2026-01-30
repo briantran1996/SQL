@@ -1,3 +1,4 @@
+```sql
 # For this project, I downloaded Spotify data from Kaggle.
 # Then I created a table to insert Spotify data into.
 # Finally, I performed analytics on the data using SQL. 
@@ -67,6 +68,7 @@ SELECT song_key, COUNT(*) AS num_tracks
 FROM spotify_top50
 GROUP BY song_key
 ORDER BY num_tracks DESC;
+```
 
 
 
