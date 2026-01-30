@@ -1,3 +1,4 @@
+```sql
  CREATE TABLE vips (
      member_id INTEGER PRIMARY KEY
    , last_name TEXT
@@ -168,6 +169,7 @@ SELECT h.hotel_name, COUNT(r.member_id) AS vip_reservations
 FROM hotels h
 LEFT JOIN reservations r ON h.hotel_id = r.hotel
 GROUP BY h.hotel_name;
+```
 
 
 
